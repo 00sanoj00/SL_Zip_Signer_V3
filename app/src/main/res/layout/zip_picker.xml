@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:background="@android:color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scale_base_height="600"
+        app:scale_base_width="400">
+
+        <ImageView
+            app:scale_left="0"
+            app:scale_width="400"
+            app:scale_height="335"
+            android:background="@drawable/bb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+        <ImageView
+            app:scale_top="340"
+            app:scale_left="0"
+            app:scale_width="400"
+            app:scale_height="150"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tx"/>
+
+
+        <ImageView
+            app:scale_width="400"
+            app:scale_height="120"
+            app:scale_left="5"
+            app:scale_top="512"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bt"/>
+
+
+
+
+
+                <Button
+                    android:id="@+id/InOutPickButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_add"
+                    android:textSize="16sp"
+                    app:scale_height="75"
+                    app:scale_left="162"
+                    app:scale_textsize="13"
+                    app:scale_top="210"
+                    app:scale_width="75" />
+
+
+        <TextView
+            android:id="@+id/InputZipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/InputZipLabel"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:scale_height="20"
+            app:scale_left="38"
+            app:scale_textsize="13"
+            app:scale_top="341"
+            app:scale_width="150" />
+
+
+        <EditText
+            android:id="@+id/InFileEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:maxWidth="500sp"
+            android:minWidth="500sp"
+            android:text="/sdcard/test_unsigned_input.zip"
+            app:scale_height="40"
+            app:scale_left="35"
+            app:scale_textsize="13"
+            app:scale_top="362"
+            app:scale_width="330" />
+
+        <TextView
+                    android:id="@+id/SignedZipTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/SignedZipLabel"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:scale_height="20"
+                    app:scale_left="38"
+                    app:scale_textsize="13"
+                    app:scale_top="410"
+                    app:scale_width="150" />
+
+                <EditText
+                    android:id="@+id/OutFileEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textNoSuggestions"
+                    android:maxWidth="500sp"
+                    android:minWidth="500sp"
+                    android:text="/sdcard/test_signed.zip"
+                    app:scale_height="40"
+                    app:scale_left="35"
+                    app:scale_textsize="13"
+                    app:scale_top="431"
+                    app:scale_width="330" />
+
+
+                <TextView
+                    android:id="@+id/KeyModeTextView"
+                    android:layout_width="7dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/KeyModeLabel"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    app:scale_height="30"
+                    app:scale_left="5"
+                    app:scale_textsize="13"
+                    app:scale_top="250"
+                    app:scale_width="90"
+                    tools:layout_editor_absoluteX="21dp" />
+
+
+                <TextView
+                    android:id="@+id/SignatureAlgorithmTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/SignatureAlgorithmLabel"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:scale_height="20"
+                    app:scale_left="0"
+                    app:scale_textsize="13"
+                    app:scale_top="150"
+                    app:scale_width="398"
+                    tools:layout_editor_absoluteX="108dp"
+                    tools:layout_editor_absoluteY="19dp" />
+
+                <Spinner
+                    android:id="@+id/CertSignatureAlgorithm"
+                    android:layout_width="349dp"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/CertSignatureAlgorithmLabel"
+                    android:textSize="32sp"
+                    app:scale_height="20"
+                    app:scale_left="320"
+                    app:scale_textsize="13"
+                    app:scale_top="270"
+                    app:scale_width="80"
+                    tools:layout_editor_absoluteY="11dp" />
+
+                <Button
+                    android:id="@+id/SignButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:background="@mipmap/ic_next"
+                    app:scale_height="75"
+                    app:scale_left="161"
+                    app:scale_textsize="13"
+                    app:scale_top="534"
+                    app:scale_width="75"
+                    tools:layout_editor_absoluteX="24dp" />
+
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/SearchableSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:scale_height="30"
+                    app:scale_left="95"
+                    android:gravity="center"
+                    app:scale_textsize="13"
+                    app:scale_top="250"
+                    app:scale_width="70" />
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

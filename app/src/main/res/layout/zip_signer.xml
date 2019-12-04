@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/linearLayout"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/black">
+
+
+	<me.itangqi.waveloadingview.WaveLoadingView
+		android:id="@+id/waveLoadingView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:wlv_round_rectangle="true"
+		app:wlv_shapeType="square"
+		app:wlv_titleCenter="0%"
+		app:wlv_triangle_direction="north"
+		app:wlv_waveAmplitude="70"
+		app:wlv_waveColor="@color/colorAccent" />
+
+	<TextView
+		android:id="@+id/SigningZipHeaderTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="20dp"
+		android:layout_marginTop="20dp"
+		android:text="Signing in progress..."
+		android:textColor="@color/whited"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/SigningZipItemTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:text="Loading certificate and private key..."
+		android:textColor="@color/whited"
+		android:textSize="12sp"
+		app:layout_constraintStart_toStartOf="@+id/SigningZipHeaderTextView"
+		app:layout_constraintTop_toBottomOf="@+id/SigningZipHeaderTextView" />
+
+
+	<Button
+		android:id="@+id/SigningZipCancelButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="20dp"
+		android:layout_marginTop="149dp"
+		android:minWidth="100sp"
+		android:text="@string/CancelButtonLabel"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
