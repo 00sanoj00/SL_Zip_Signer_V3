@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView2"
     android:background="@android:color/white"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -65,7 +64,6 @@
 
 
         <TextView
-            android:id="@+id/InputZipTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/InputZipLabel"
@@ -93,8 +91,7 @@
             app:scale_width="330" />
 
         <TextView
-                    android:id="@+id/SignedZipTextView"
-                    android:layout_width="wrap_content"
+            android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/SignedZipLabel"
                     android:textSize="16sp"
@@ -121,7 +118,6 @@
 
 
                 <TextView
-                    android:id="@+id/KeyModeTextView"
                     android:layout_width="7dp"
                     android:layout_height="wrap_content"
                     android:text="@string/KeyModeLabel"

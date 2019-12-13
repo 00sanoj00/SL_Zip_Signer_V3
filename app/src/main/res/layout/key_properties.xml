@@ -81,8 +81,7 @@
             </TableRow>
             <TableRow>
                 <TextView android:text="@string/KeySizeLabel"
-                          android:id="@+id/KeySizeLabel"
-                          android:layout_width="fill_parent"
+                    android:layout_width="fill_parent"
                           android:layout_height="wrap_content"
                           android:textSize="16sp"
                           android:textStyle="bold"
@@ -99,8 +98,7 @@
         </TableLayout>
 
         <TextView android:text="@string/CertParametersTitle"
-                  android:id="@+id/CertParametersLabel"
-                  android:layout_width="fill_parent"
+            android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:textSize="16sp"
                   android:textStyle="bold"

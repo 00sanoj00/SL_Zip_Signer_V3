@@ -18,12 +18,15 @@ package Sanoj.APKsignerPro;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -36,10 +39,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 import java.io.File;
@@ -59,6 +58,8 @@ public class ZipPickerActivity extends Activity {
 
     private Button button;
     private SearchableSpinner spn;
+    private Context mcontext;
+    private String path;
 
     protected static final int REQUEST_CODE_PICK_FILE_TO_OPEN = 1;
     protected static final int REQUEST_CODE_PICK_FILE_TO_SAVE = 2;
@@ -120,6 +121,8 @@ public class ZipPickerActivity extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 pickInputOutputFiles();
+
+
             }
         });
 
@@ -450,6 +453,8 @@ public class ZipPickerActivity extends Activity {
 
     private void pickInputOutputFiles() {
         launchFileBrowser( this, getResources().getString(R.string.BrowserSelectInput), REQUEST_CODE_PICK_INOUT_FILE, getOutputFilename());
+
+
     }
 
 

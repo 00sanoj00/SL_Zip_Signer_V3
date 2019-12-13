@@ -43,6 +43,8 @@ public class AndroidFileBrowser extends ListActivity {
     private Pattern audioPattern;
     private Pattern packagePattern;
     private Pattern htmlPattern;
+    private Pattern apkpatton;
+    private Pattern jarpatton;
 
     boolean directorySelectionMode = false;
 
@@ -54,7 +56,10 @@ public class AndroidFileBrowser extends ListActivity {
 
         imagePattern = Pattern.compile( getString(R.string.fileEndingImage));
         audioPattern = Pattern.compile( getString(R.string.fileEndingAudio));
-        packagePattern = Pattern.compile( getString(R.string.fileEndingPackage));
+        packagePattern = Pattern.compile(".(zip|ZIP|Zip)$");
+        apkpatton = Pattern.compile(".(apk|APK)$");
+        jarpatton = (Pattern.compile(".(jar|Jar|JAR)$"));
+
         htmlPattern = Pattern.compile( getString(R.string.fileEndingWebText));
 
         Intent i = getIntent();
@@ -162,18 +167,18 @@ public class AndroidFileBrowser extends ListActivity {
         // Add the "." == "current directory"
         this.directoryEntries.add(new IconifiedText(
                 getString(R.string.current_dir), 
-                getResources().getDrawable(R.drawable.folder)));		
+                getResources().getDrawable(R.drawable.ic_file_top)));
         // and the ".." == 'Up one level'
         if(this.currentDirectory.getParent() != null)
             this.directoryEntries.add(new IconifiedText(
                     getString(R.string.up_one_level), 
-                    getResources().getDrawable(R.drawable.uponelevel)));
+                    getResources().getDrawable(R.drawable.ic_delete)));
 
         Drawable currentIcon = null;
         for (File currentFile : files) {
             if (currentFile.getName().startsWith(".")) continue; // ignore hidden files and directories.
             if (currentFile.isDirectory()) {
-                currentIcon = getResources().getDrawable(R.drawable.folder);
+                currentIcon = getResources().getDrawable(R.drawable.ic_folder);
             }
             else if (!directorySelectionMode) {
                 String fileName = currentFile.getName().toLowerCase();
@@ -181,19 +186,25 @@ public class AndroidFileBrowser extends ListActivity {
                  * depending on the FileEndings defined in:
                  * res/values/fileendings.xml. */
                 if (imagePattern.matcher( fileName).find()) {
-                    currentIcon = getResources().getDrawable(R.drawable.image); 
+                    currentIcon = getResources().getDrawable(R.drawable.ic_file);
                 }
                 else if (htmlPattern.matcher( fileName).find()) { 
-                    currentIcon = getResources().getDrawable(R.drawable.webtext);
+                    currentIcon = getResources().getDrawable(R.drawable.ic_file);
                 }
                 else if (packagePattern.matcher( fileName).find()) { 
-                    currentIcon = getResources().getDrawable(R.drawable.packed);
+                    currentIcon = getResources().getDrawable(R.drawable.ic_zip);
                 }
                 else if (audioPattern.matcher( fileName).find()) {
-                    currentIcon = getResources().getDrawable(R.drawable.audio);
+                    currentIcon = getResources().getDrawable(R.drawable.ic_file);
+                }
+                else if (apkpatton.matcher( fileName).find()) {
+                    currentIcon = getResources().getDrawable(R.drawable.ic_android);
+                }
+                else if (jarpatton.matcher( fileName).find()) {
+                    currentIcon = getResources().getDrawable(R.drawable.ic_jars);
                 }
                 else{
-                    currentIcon = getResources().getDrawable(R.drawable.text);
+                    currentIcon = getResources().getDrawable(R.drawable.ic_file);
                 }				
             }
             else continue;

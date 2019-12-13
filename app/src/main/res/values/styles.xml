@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="DeviceDefault" parent="android:Theme.DeviceDefault">
-    </style>
-
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBarr">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="Theme.AppCompat.Light.DarkActionBarr"></style>
 
     <style name="sflash" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="android:windowFullscreen">true</item>
