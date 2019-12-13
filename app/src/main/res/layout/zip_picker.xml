@@ -136,15 +136,16 @@
                     android:id="@+id/SignatureAlgorithmTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="@string/SignatureAlgorithmLabel"
+
+                    android:text="Algorithm"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:scale_height="20"
-                    app:scale_left="0"
+                    android:gravity="center"
+                    app:scale_height="30"
+                    app:scale_left="295"
                     app:scale_textsize="13"
-                    app:scale_top="150"
-                    app:scale_width="398"
+                    app:scale_top="250"
+                    app:scale_width="90"
                     tools:layout_editor_absoluteX="108dp"
                     tools:layout_editor_absoluteY="19dp" />
 
@@ -154,11 +155,12 @@
                     android:layout_height="wrap_content"
                     android:prompt="@string/CertSignatureAlgorithmLabel"
                     android:textSize="32sp"
-                    app:scale_height="20"
-                    app:scale_left="320"
-                    app:scale_textsize="13"
-                    app:scale_top="270"
-                    app:scale_width="80"
+                    app:scale_height="30"
+                    app:scale_left="225"
+                    android:gravity="center"
+                    app:scale_textsize="23"
+                    app:scale_top="250"
+                    app:scale_width="70"
                     tools:layout_editor_absoluteY="11dp" />
 
                 <Button
@@ -180,11 +182,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:scale_height="30"
-                    app:scale_left="95"
+                    app:scale_left="85"
                     android:gravity="center"
-                    app:scale_textsize="13"
+                    app:scale_textsize="23"
                     app:scale_top="250"
                     app:scale_width="70" />
+
+        <ahmadrosid.com.lib.CustomTextView
+            android:id="@+id/textView"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_height="55"
+            app:scale_left="5"
+            app:scale_textsize="53"
+            app:scale_top="54"
+            app:scale_width="390"
+            android:text="@string/zipsing"
+            android:textSize="35sp"
+            app:fontPath="@string/fontss"
+            tools:layout_editor_absoluteX="102dp"
+            tools:layout_editor_absoluteY="498dp" />
 
     </com.ssomai.android.scalablelayout.ScalableLayout>
 

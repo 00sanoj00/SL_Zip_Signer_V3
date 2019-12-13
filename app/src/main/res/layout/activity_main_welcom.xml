@@ -4,6 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MainWelcom">
+
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:scale_base_height="600"
+        app:scale_base_width="400">
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        app:scale_height="175"
+        app:scale_left="111"
+        app:scale_textsize="13"
+        app:scale_top="254"
+        app:scale_width="175"
+        android:layout_height="191dp"
+        android:background="@drawable/ic_devil"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <ahmadrosid.com.lib.CustomTextView
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_height="55"
+        app:scale_left="5"
+        app:scale_textsize="53"
+        app:scale_top="434"
+        app:scale_width="390"
+        android:text="@string/zipsing"
+        android:textSize="35sp"
+        app:fontPath="@string/fontss"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="498dp" />
+
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

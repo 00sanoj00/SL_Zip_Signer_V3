@@ -192,5 +192,7 @@
     <string name="InputFileSameAsOutput">Input and output files are the same. Specify a different name for the output.</string>
     <!-- Error message shown when the key/mode="auto" and the key to use for signing can't be determined.  %s replaced with input filename. -->
     <string name="AutoKeySelectionError">Unable to auto-select key for signing %s</string>
+    <string name="zipsing">SL ZipSigner Pro</string>
+    <string name="fontss">fonts/Marlboro.ttf</string>
 
 </resources>

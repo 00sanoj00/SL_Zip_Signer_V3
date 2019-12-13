@@ -10,9 +10,9 @@
         android:icon="@drawable/ic_file_storage"
         android:label="@string/app_name"
         android:theme="@style/sflash">
-        <activity android:name=".MainWelcom"></activity>
+        <activity android:name=".ZipPickerActivity"></activity>
         <activity
-            android:name=".ZipPickerActivity"
+            android:name=".MainWelcom"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
