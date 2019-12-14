@@ -34,7 +34,7 @@ public class MainWelcom extends AppCompatActivity {
 
 
             }
-        }, 5000);
+        }, 2000);
 
 
     }

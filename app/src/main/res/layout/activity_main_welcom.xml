@@ -47,6 +47,25 @@
         tools:layout_editor_absoluteY="498dp" />
 
 
+
+        <ahmadrosid.com.lib.CustomTextView
+            android:id="@+id/textView"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_height="55"
+            app:scale_left="5"
+            app:scale_textsize="25"
+            app:scale_top="474"
+            app:scale_width="390"
+            android:text="Devil Developer"
+            android:textSize="35sp"
+            android:textColor="@color/mainc"
+            app:fontPath="@string/fontss"
+            tools:layout_editor_absoluteX="102dp"
+            tools:layout_editor_absoluteY="498dp" />
+
+
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
 

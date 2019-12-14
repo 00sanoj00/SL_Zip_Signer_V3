@@ -3,4 +3,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="black">#000000</color>
     <color name="whited">#D3CFCFCF</color>
+    <color name="mainc">#FDE47070</color>
 </resources>
