@@ -56,7 +56,7 @@
             app:scale_height="55"
             app:scale_left="5"
             app:scale_textsize="25"
-            app:scale_top="474"
+            app:scale_top="484"
             app:scale_width="390"
             android:text="Devil Developer"
             android:textSize="35sp"
