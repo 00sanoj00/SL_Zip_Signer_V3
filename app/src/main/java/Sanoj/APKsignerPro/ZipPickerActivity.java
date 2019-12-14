@@ -15,18 +15,19 @@
  */
 package Sanoj.APKsignerPro;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -39,10 +40,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
-
-import java.io.File;
-
+import java.io.File;;
 import Sanoj.logging.LoggerManager;
 import Sanoj.logging.android.AndroidLogger;
 import Sanoj.logging.android.AndroidLoggerFactory;
@@ -93,6 +94,8 @@ public class ZipPickerActivity extends Activity {
         // enable toasts for info level logging.  toasts are default for error and warnings.
         logger.setToastContext(getBaseContext());
         logger.setInfoToastEnabled(true);
+
+        permisson();
 
         Button createButton = (Button)findViewById(R.id.SignButton);
         createButton.setOnClickListener( new OnClickListener() {
@@ -151,14 +154,6 @@ public class ZipPickerActivity extends Activity {
             @Override
             public void onNothingSelected(AdapterView<?> adapter) {}
         });
-
-
-
-
-
-
-
-
 
         algorithmSpinner = (Spinner) findViewById(R.id.CertSignatureAlgorithm);
         sha1WithRsaSpinnerAdapter = ArrayAdapter.createFromResource(this,
@@ -444,6 +439,45 @@ public class ZipPickerActivity extends Activity {
 
     private void pickInputFile(){
         launchFileBrowser( this, getResources().getString(R.string.BrowserSelectInput), REQUEST_CODE_PICK_FILE_TO_OPEN, getInputFilename());
+    }
+
+    public  void permisson() {
+
+        try {
+
+
+            if (ContextCompat.checkSelfPermission(ZipPickerActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    + ContextCompat.checkSelfPermission(ZipPickerActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED) {
+
+                if (ActivityCompat.shouldShowRequestPermissionRationale(ZipPickerActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                        || ActivityCompat.shouldShowRequestPermissionRationale(ZipPickerActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                ) {
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        ActivityCompat.requestPermissions(ZipPickerActivity.this,
+                                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
+                                1);
+                    }
+                } else {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        ActivityCompat.requestPermissions(ZipPickerActivity.this,
+                                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                        Manifest.permission.READ_EXTERNAL_STORAGE},
+                                1);
+                    }
+
+                }
+
+            } else {
+
+            }
+
+        } catch (Exception O) {
+
+            Toast.makeText(this, "please grant permission menualy", Toast.LENGTH_SHORT).show();
+
+        }
     }
 
 
